@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools Builder</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body class="bg-[#1d232a]">
+    <nav class="bg-[#191e24] shadow-lg text-gray-300">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <!-- Logo -->
+                <div class="flex items-center py-4 px-2">
+                    <a href="#" class="flex">
+                        <img class="w-[25px] h-[25px] rounded" src="./images/logo.jpg" alt="">
+                        <span class="font-medium text-black-500 text-lg ms-2">Tools Builder</span>
+                    </a>
+                </div>
+                <!-- Primary Navbar items -->
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#" class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300">Pricing</a>
+                    <a href="#" class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300">Testimonials</a>
+                    <a href="#" class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300">Faq</a>
+                </div>
+                <!-- Secondary Navbar items -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#" class="py-2 px-2 font-small text-white bg-blue-500 rounded hover:bg-blue-900 transition duration-300">Log In</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-gray-500 hover:text-blue-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
+                            <path d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- mobile menu -->
+        <div class="hidden mobile-menu">
+            <ul class="">
+                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold">Pricing</a></li>
+                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Testimonials</a></li>
+                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Faq</a></li>
+            </ul>
+        </div>
+        <script>
+            const btn = document.querySelector("button.mobile-menu-button");
+            const menu = document.querySelector(".mobile-menu");
+
+            btn.addEventListener("click", () => {
+                menu.classList.toggle("hidden");
+            });
+        </script>
+    </nav>
+    <section class="max-w-screen-lg m-auto mt-5">
+        <div class="flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 p-5">
+                <h1 class="text-5xl font-bold mb-4 text-gray-400">Create Profitable Tools</h1>
+                <p class="mb-4 text-gray-400">Skip the market research rabbit hole. Our growing database has over 500+ tool ideas, 50+ untapped tool ideas, and 50+ popular websites website!</p>
+                <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300">Get Tool Builder</button>
+            </div>
+            <div class="md:w-1/2 p-5">
+                <img src="./images/banner img.webp" alt="Banner Image" class="w-full h-auto rounded-2xl ">
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#2a323c] m-auto mt-5 text-center p-5 md:p-10">
+        <div class="mx-auto max-w-screen-lg">
+            <h1 class="text-gray-400 font-bold text-2xl md:text-4xl my-3 md:my-5">250,000 sites are created daily</h1>
+            <p class="text-gray-400 mx-auto my-3 md:my-5 w-full md:w-1/2 py-3 md:py-5">You need to stand out and building free tools no matter what your site is about is the answer.</p>
+            <div class="flex flex-col md:flex-row items-center justify-center">
+                <div class="text-center w-full md:w-2/12 my-3 md:my-0">
+                    <span>🧑‍💻</span>
+                    <p class="text-gray-400">10 hours to find a free tool that works</p>
+                </div>
+                <span class="text-gray-400"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                <div class="text-center w-full md:w-2/12 my-3 md:my-0">
+                    <span>😮‍💨</span>
+                    <p class="text-gray-400">$125 to subscribe to Ahref to see traffic</p>
+                </div>
+                <span class="text-gray-400"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
+                <div class="text-center w-full md:w-2/12 my-3 md:my-0">
+                    <span>😔</span>
+                    <p class="text-gray-400">WEEKS to Build the Tool</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+</body>
+
+</html>
