@@ -99,11 +99,11 @@
         </div>
         <div class="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-10 mt-5 md:mt-10">
             <div class="text-center bg-orange-900 p-3">
-                <h2 class="text-gray-300 py-2">You without Niche Tools</h2>
+                <h2 class="text-gray-300 py-2">You without Tools builder</h2>
                 <img src="./images/chart one.webp" class="w-48 h-48 md:w-auto md:h-[200px]" alt="">
             </div>
             <div class="text-center p-3 bg-green-900">
-                <h2 class="text-gray-300 py-2">You With Niche Tools</h2>
+                <h2 class="text-gray-300 py-2">You With  Tools builder</h2>
                 <img src="./images/shart two.webp" class="w-48 h-48 md:w-auto md:h-[200px]" alt="">
             </div>
         </div>
@@ -143,14 +143,84 @@
     </section>
     
     
+<section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+    <div>
+        <h1 class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]">What People are saying</h1>
+    </div>
+    <div class="flex flex-wrap justify-center gap-3 md:gap-5 pt-5 md:pt-10">
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+            <img src="./images/testimonials 1.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+            <img src="./images/testimonials 2.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+            <img src="./images/testimonials 3.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+            <img src="./images/testimonials 4.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
+        </div>
+    </div>
 
+</section>
 
+<section class="bg-[#191e24] m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
 
+    <div class="max-w-3xl mx-auto px-4 py-8">
+        <h1 class="text-3xl text-gray-400 font-bold p-5 mb-5">FAQ</h1>
+        <h1 class="text-3xl text-gray-400 font-bold mb-4">Frequently Asked Questions</h1>
+        <div class="space-y-4">
+          <!-- FAQ Item 1 -->
+          <div class="border rounded-md p-4">
+            <button class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-900" aria-expanded="false" onclick="toggleAnswer('answer1')">
+              <span class="text-gray-100">What do I get exactly?</span>
+              <i id="icon1" class="fas fa-plus text-gray-100"></i>
+            </button>
+            <div id="answer1" class="hidden mt-2 text-gray-100 transition-opacity duration-300">
+                You get access to a database of over 500+ Niche Ideas in the tools space. Think Word Counter, Calcluators etc. These can be used for either standalone sites or add on's to your site. You also get a growing list of untapped tools along with deep dives of popular ones.
+            </div>
+          </div>
+          <!-- FAQ Item 2 -->
+          <div class="border rounded-md p-4">
+            <button class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-300" aria-expanded="false" onclick="toggleAnswer('answer2')">
+                <span class="text-gray-100">Can I get a refund?</span>
+              <i id="icon2" class="fas fa-plus text-gray-100"></i>
+            </button>
+            <div id="answer2" class="hidden mt-2 text-gray-100 transition-opacity duration-300">
+                There are no refunds. Make sure you want it before you buy
+            </div>
+          </div>
+          <!-- FAQ Item 3 -->
+          <div class="border rounded-md p-4">
+            <button class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-300" aria-expanded="false" onclick="toggleAnswer('answer3')">
+                <span class="text-gray-100">I have another Question?</span>
+              <i id="icon3" class="fas fa-plus text-gray-100"></i>
+            </button>
+            <div id="answer3" class="hidden mt-2 text-gray-100 transition-opacity duration-300">
+              Cool. Reach out on my gmail.(shazid747@gmail.com)
+            </div>
+          </div>
+        </div>
+      </div>
+</section>
 
-
-
-
-
+<script>
+    function toggleAnswer(id) {
+      const answer = document.getElementById(id);
+      const icon = document.getElementById('icon' + id.substr(-1));
+      const expanded = answer.getAttribute('aria-expanded') === 'true';
+      answer.classList.toggle('hidden');
+      answer.classList.toggle('opacity-100');
+      answer.setAttribute('aria-expanded', !expanded);
+      if (!expanded) {
+        icon.classList.remove('fa-plus');
+        icon.classList.add('fa-minus');
+      } else {
+        icon.classList.remove('fa-minus');
+        icon.classList.add('fa-plus');
+      }
+    }
+  </script>
 
 
 
