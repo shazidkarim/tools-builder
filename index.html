@@ -34,17 +34,17 @@
           <!-- Primary Navbar items -->
           <div class="hidden md:flex items-center space-x-1">
             <a
-              href="#"
+              href="#pricing"
               class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300"
               >Pricing</a
             >
             <a
-              href="#"
+              href="#testimonials"
               class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300"
               >Testimonials</a
             >
             <a
-              href="#"
+              href="#faq"
               class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300"
               >Faq</a
             >
@@ -52,7 +52,7 @@
           <!-- Secondary Navbar items -->
           <div class="hidden md:flex items-center space-x-3">
             <a
-              href="#"
+              href="#pricing"
               class="py-2 px-2 font-small text-white bg-blue-500 rounded hover:bg-blue-900 transition duration-300"
               >Log In</a
             >
@@ -80,14 +80,14 @@
         <ul class="">
           <li class="active">
             <a
-              href="index.html"
+              href="#pricing"
               class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold"
               >Pricing</a
             >
           </li>
           <li>
             <a
-              href="#services"
+              href="#testimonials"
               class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"
               >Testimonials</a
             >
@@ -271,7 +271,7 @@
       </div>
     </section>
 
-    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+    <section id="testimonials" class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
       <div>
         <h1
           class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]"
@@ -311,7 +311,7 @@
       </div>
     </section>
 
-    <section
+    <section id="faq"
       class="bg-[#191e24] m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl"
     >
       <div class="max-w-3xl mx-auto px-4 py-8">
@@ -410,8 +410,8 @@
       </div>
     </section>
 
-    <section class="bg-[#191e24] m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
-        <div class="flex flex-col items-center justify-center">
+    <section id="pricing" class="bg-[#191e24] m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+        <div   class="flex flex-col items-center justify-center">
           <div>
             <h1 class="text-purple-600 p-4">Pricing</h1>
             <h1 class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%] m-5">
@@ -441,8 +441,54 @@
           </div>
         </div>
       </section>
-      
+      <footer class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="w-full md:w-4/12 mb-8 md:mb-0 md:mr-8">
+                <img src="./images/logo.jpg" alt="Tools builder Logo" class="h-8 mx-auto rounded-lg m-3 md:mx-0 md:mr-4">
+                <p class="text-gray-400 text-center md:text-left">A collection of untapped tools ready for you to rank on Google with. Plus some extremely profitable examples.</p>
+            </div>
+            <div class="w-full md:w-1/3 text-xs">
+                <h1 class="text-gray-500 font-bold mb-4">LINKS</h1>
+                <ul class="text-gray-400">
+                    <li class="py-1"><a href="#" class="hover:text-white">Support</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-white">Pricing</a></li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/3 text-xs">
+                <h1 class="text-gray-500 font-bold mb-4">LEGAL</h1>
+                <ul class="text-gray-400">
+                    <li class="py-1"><a href="#" class="hover:text-white">Terms of Services</a></li>
+                    <li class="py-1"><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <p class="text-gray-500 pt-5 text-center">Copyright © 2024 - All rights reserved</p>
+    
+    
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const links = document.querySelectorAll('a[href^="#"]');
+          
+          links.forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              
+              const targetId = this.getAttribute('href').substring(1);
+              const targetElement = document.getElementById(targetId);
+              
+              if (targetElement) {
+                const offsetTop = targetElement.offsetTop;
+                window.scrollTo({
+                  top: offsetTop,
+                  behavior: 'smooth'
+                });
+              }
+            });
+          });
+        });
+      </script>
     <script>
       function toggleAnswer(id) {
         const answer = document.getElementById(id);
