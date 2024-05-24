@@ -1,241 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tools Builder</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-
-</head>
-<body class="bg-[#1d232a]">
+  </head>
+  <body class="bg-[#1d232a]">
     <nav class="bg-[#191e24] shadow-lg text-gray-300">
-        <div class="max-w-6xl mx-auto px-4">
-            <div class="flex justify-between">
-                <!-- Logo -->
-                <div class="flex items-center py-4 px-2">
-                    <a href="#" class="flex">
-                        <img class="w-[25px] h-[25px] rounded" src="./images/logo.jpg" alt="">
-                        <span class="font-medium text-black-500 text-lg ms-2">Tools Builder</span>
-                    </a>
-                </div>
-                <!-- Primary Navbar items -->
-                <div class="hidden md:flex items-center space-x-1">
-                    <a href="#" class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300">Pricing</a>
-                    <a href="#" class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300">Testimonials</a>
-                    <a href="#" class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300">Faq</a>
-                </div>
-                <!-- Secondary Navbar items -->
-                <div class="hidden md:flex items-center space-x-3">
-                    <a href="#" class="py-2 px-2 font-small text-white bg-blue-500 rounded hover:bg-blue-900 transition duration-300">Log In</a>
-                </div>
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button class="outline-none mobile-menu-button">
-                        <svg class="w-6 h-6 text-gray-500 hover:text-blue-500" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
-                            <path d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="flex justify-between">
+          <!-- Logo -->
+          <div class="flex items-center py-4 px-2">
+            <a href="#" class="flex">
+              <img
+                class="w-[25px] h-[25px] rounded"
+                src="./images/logo.jpg"
+                alt=""
+              />
+              <span class="font-medium text-black-500 text-lg ms-2"
+                >Tools Builder</span
+              >
+            </a>
+          </div>
+          <!-- Primary Navbar items -->
+          <div class="hidden md:flex items-center space-x-1">
+            <a
+              href="#"
+              class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300"
+              >Pricing</a
+            >
+            <a
+              href="#"
+              class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300"
+              >Testimonials</a
+            >
+            <a
+              href="#"
+              class="py-4 px-2 text-black-500 hover:text-blue-500 transition duration-300"
+              >Faq</a
+            >
+          </div>
+          <!-- Secondary Navbar items -->
+          <div class="hidden md:flex items-center space-x-3">
+            <a
+              href="#"
+              class="py-2 px-2 font-small text-white bg-blue-500 rounded hover:bg-blue-900 transition duration-300"
+              >Log In</a
+            >
+          </div>
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button class="outline-none mobile-menu-button">
+              <svg
+                class="w-6 h-6 text-gray-500 hover:text-blue-500"
+                fill="none"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16m-7 6h7"></path>
+              </svg>
+            </button>
+          </div>
         </div>
-        <!-- mobile menu -->
-        <div class="hidden mobile-menu">
-            <ul class="">
-                <li class="active"><a href="index.html" class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold">Pricing</a></li>
-                <li><a href="#services" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Testimonials</a></li>
-                <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300">Faq</a></li>
-            </ul>
-        </div>
-        <script>
-            const btn = document.querySelector("button.mobile-menu-button");
-            const menu = document.querySelector(".mobile-menu");
+      </div>
+      <!-- mobile menu -->
+      <div class="hidden mobile-menu">
+        <ul class="">
+          <li class="active">
+            <a
+              href="index.html"
+              class="block text-sm px-2 py-4 text-white bg-blue-500 font-semibold"
+              >Pricing</a
+            >
+          </li>
+          <li>
+            <a
+              href="#services"
+              class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"
+              >Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              href="#about"
+              class="block text-sm px-2 py-4 hover:bg-blue-500 transition duration-300"
+              >Faq</a
+            >
+          </li>
+        </ul>
+      </div>
+      <script>
+        const btn = document.querySelector("button.mobile-menu-button");
+        const menu = document.querySelector(".mobile-menu");
 
-            btn.addEventListener("click", () => {
-                menu.classList.toggle("hidden");
-            });
-        </script>
+        btn.addEventListener("click", () => {
+          menu.classList.toggle("hidden");
+        });
+      </script>
     </nav>
     <section class="max-w-screen-lg m-auto mt-5">
-        <div class="flex flex-col md:flex-row items-center">
-            <div class="md:w-1/2 p-5">
-                <h1 class="text-5xl font-bold mb-4 text-gray-400">Create Profitable Tools</h1>
-                <p class="mb-4 text-gray-400">Skip the market research rabbit hole. Our growing database has over 500+ tool ideas, 50+ untapped tool ideas, and 50+ popular websites website!</p>
-                <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300">Get Tool Builder</button>
-            </div>
-            <div class="md:w-1/2 p-5">
-                <img src="./images/banner img.webp" alt="Banner Image" class="w-full h-auto rounded-2xl ">
-            </div>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 p-5">
+          <h1 class="text-5xl font-bold mb-4 text-gray-400">
+            Create Profitable Tools
+          </h1>
+          <p class="mb-4 text-gray-400">
+            Skip the market research rabbit hole. Our growing database has over
+            500+ tool ideas, 50+ untapped tool ideas, and 50+ popular websites
+            website!
+          </p>
+          <button
+            class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300"
+          >
+            Get Tool Builder
+          </button>
         </div>
+        <div class="md:w-1/2 p-5">
+          <img
+            src="./images/banner img.webp"
+            alt="Banner Image"
+            class="w-full h-auto rounded-2xl"
+          />
+        </div>
+      </div>
     </section>
 
     <section class="bg-[#2a323c] m-auto mt-5 text-center p-5 md:p-10">
-        <div class="mx-auto max-w-screen-lg">
-            <h1 class="text-gray-400 font-bold text-2xl md:text-4xl my-3 md:my-5">250,000 sites are created daily</h1>
-            <p class="text-gray-400 mx-auto my-3 md:my-5 w-full md:w-1/2 py-3 md:py-5">You need to stand out and building free tools no matter what your site is about is the answer.</p>
-            <div class="flex flex-col md:flex-row items-center justify-center">
-                <div class="text-center w-full md:w-2/12 my-3 md:my-0">
-                    <span>🧑‍💻</span>
-                    <p class="text-gray-400">10 hours to find a free tool that works</p>
-                </div>
-                <span class="text-gray-400 m-4"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
-                <div class="text-center w-full md:w-2/12 my-3 md:my-0">
-                    <span>😮‍💨</span>
-                    <p class="text-gray-400">$125 to subscribe to Ahref to see traffic</p>
-                </div>
-                <span class="text-gray-400 m-4"><i class="fa fa-arrow-right" aria-hidden="true"></i></span>
-                <div class="text-center w-full md:w-2/12 my-3 md:my-0">
-                    <span>😔</span>
-                    <p class="text-gray-400">WEEKS to Build the Tool</p>
-                </div>
-            </div>
+      <div class="mx-auto max-w-screen-lg">
+        <h1 class="text-gray-400 font-bold text-2xl md:text-4xl my-3 md:my-5">
+          250,000 sites are created daily
+        </h1>
+        <p
+          class="text-gray-400 mx-auto my-3 md:my-5 w-full md:w-1/2 py-3 md:py-5"
+        >
+          You need to stand out and building free tools no matter what your site
+          is about is the answer.
+        </p>
+        <div class="flex flex-col md:flex-row items-center justify-center">
+          <div class="text-center w-full md:w-2/12 my-3 md:my-0">
+            <span>🧑‍💻</span>
+            <p class="text-gray-400">10 hours to find a free tool that works</p>
+          </div>
+          <span class="text-gray-400 m-4"
+            ><i class="fa fa-arrow-right" aria-hidden="true"></i
+          ></span>
+          <div class="text-center w-full md:w-2/12 my-3 md:my-0">
+            <span>😮‍💨</span>
+            <p class="text-gray-400">
+              $125 to subscribe to Ahref to see traffic
+            </p>
+          </div>
+          <span class="text-gray-400 m-4"
+            ><i class="fa fa-arrow-right" aria-hidden="true"></i
+          ></span>
+          <div class="text-center w-full md:w-2/12 my-3 md:my-0">
+            <span>😔</span>
+            <p class="text-gray-400">WEEKS to Build the Tool</p>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
-        <div>
-            <h1 class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]">Tools are important. Just look at the charts</h1>
+      <div>
+        <h1
+          class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]"
+        >
+          Tools are important. Just look at the charts
+        </h1>
+      </div>
+      <div
+        class="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-10 mt-5 md:mt-10"
+      >
+        <div class="text-center bg-orange-900 p-3">
+          <h2 class="text-gray-300 py-2">You without Tools builder</h2>
+          <img
+            src="./images/chart one.webp"
+            class="w-48 h-48 md:w-auto md:h-[200px]"
+            alt=""
+          />
         </div>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-10 mt-5 md:mt-10">
-            <div class="text-center bg-orange-900 p-3">
-                <h2 class="text-gray-300 py-2">You without Tools builder</h2>
-                <img src="./images/chart one.webp" class="w-48 h-48 md:w-auto md:h-[200px]" alt="">
-            </div>
-            <div class="text-center p-3 bg-green-900">
-                <h2 class="text-gray-300 py-2">You With  Tools builder</h2>
-                <img src="./images/shart two.webp" class="w-48 h-48 md:w-auto md:h-[200px]" alt="">
-            </div>
+        <div class="text-center p-3 bg-green-900">
+          <h2 class="text-gray-300 py-2">You With Tools builder</h2>
+          <img
+            src="./images/shart two.webp"
+            class="w-48 h-48 md:w-auto md:h-[200px]"
+            alt=""
+          />
         </div>
-    </section>
-    
-    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
-        <h1 class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]">We've REALLY done the research.</h1>
-        <p class="text-gray-400 mx-auto max-w-[75%] pt-5 md:pt-10">Tools that you can build today that have HIGH TRAFFIC, LOW DR</p>
-        <div class="flex flex-wrap justify-center gap-3 md:gap-5 pt-5 md:pt-10">
-            <div class="border rounded-lg p-2 w-full md:w-4/12">
-                <img src="./images/research image 1.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-            </div>
-            <div class="border rounded-lg p-2 w-full md:w-4/12">
-                <img src="./images/research image 2.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-            </div>
-            <div class="border rounded-lg p-2 w-full md:w-4/12">
-                <img src="./images/research image 3.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-            </div>
-            <div class="border rounded-lg p-2 w-full md:w-4/12">
-                <img src="./images/research image 4.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-            </div>
-        </div>
+      </div>
     </section>
 
-    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl ">
-        <h1 class="text-2xl text-gray-400 font-bold mb-4">Example Tool</h1>
-        <p class="mb-4 text-gray-400">This Word Counter is perfect as an add-on or even standalone tool.</p>
-        <div class="w-4/12 mx-auto border p-3 bg-[#ebf8ff] rounded-lg">
-            <textarea id="text-input" class="w-full bg-[#1d232a] text-gray-400 p-3 border border-gray-300 rounded-lg mb-4" rows="10" placeholder="Type or paste your text here..."></textarea>
+    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+      <h1
+        class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]"
+      >
+        We've REALLY done the research.
+      </h1>
+      <p class="text-gray-400 mx-auto max-w-[75%] pt-5 md:pt-10">
+        Tools that you can build today that have HIGH TRAFFIC, LOW DR
+      </p>
+      <div class="flex flex-wrap justify-center gap-3 md:gap-5 pt-5 md:pt-10">
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/research image 1.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/research image 2.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/research image 3.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/research image 4.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+      <h1 class="text-2xl text-gray-400 font-bold mb-4">Example Tool</h1>
+      <p class="mb-4 text-gray-400">
+        This Word Counter is perfect as an add-on or even standalone tool.
+      </p>
+      <div class="w-4/12 mx-auto border p-3 bg-[#ebf8ff] rounded-lg">
+        <textarea
+          id="text-input"
+          class="w-full bg-[#1d232a] text-gray-400 p-3 border border-gray-300 rounded-lg mb-4"
+          rows="10"
+          placeholder="Type or paste your text here..."
+        ></textarea>
         <div class="flex justify-between">
-            <div class="font-bold text-gray-600">Word Count: <span class="font-bold" id="word-count">0</span></div>
-            <div class="font-bold text-gray-600">Letter Count: <span class="font-bold" id="letter-count">0</span></div>
+          <div class="font-bold text-gray-600">
+            Word Count: <span class="font-bold" id="word-count">0</span>
+          </div>
+          <div class="font-bold text-gray-600">
+            Letter Count: <span class="font-bold" id="letter-count">0</span>
+          </div>
         </div>
-        <p class="text-gray-600 p-3">it into your site with simple copy and paste. Works with wordpress, next.js and more.
-            Plug</p>
-        </div>
+        <p class="text-gray-600 p-3">
+          it into your site with simple copy and paste. Works with wordpress,
+          next.js and more. Plug
+        </p>
+      </div>
     </section>
-    
-    
-<section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
-    <div>
-        <h1 class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]">What People are saying</h1>
-    </div>
-    <div class="flex flex-wrap justify-center gap-3 md:gap-5 pt-5 md:pt-10">
-        <div class="border rounded-lg p-2 w-full md:w-4/12">
-            <img src="./images/testimonials 1.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-        </div>
-        <div class="border rounded-lg p-2 w-full md:w-4/12">
-            <img src="./images/testimonials 2.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-        </div>
-        <div class="border rounded-lg p-2 w-full md:w-4/12">
-            <img src="./images/testimonials 3.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-        </div>
-        <div class="border rounded-lg p-2 w-full md:w-4/12">
-            <img src="./images/testimonials 4.webp" class="w-38 h-38 md:w-auto md:h-[200px] mx-auto" alt="">
-        </div>
-    </div>
 
-</section>
+    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+      <div>
+        <h1
+          class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%]"
+        >
+          What People are saying
+        </h1>
+      </div>
+      <div class="flex flex-wrap justify-center gap-3 md:gap-5 pt-5 md:pt-10">
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/testimonials 1.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/testimonials 2.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/testimonials 3.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+        <div class="border rounded-lg p-2 w-full md:w-4/12">
+          <img
+            src="./images/testimonials 4.webp"
+            class="w-38 h-38 md:w-auto md:h-[200px] mx-auto"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
 
-<section class="bg-[#191e24] m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
-
-    <div class="max-w-3xl mx-auto px-4 py-8">
+    <section
+      class="bg-[#191e24] m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl"
+    >
+      <div class="max-w-3xl mx-auto px-4 py-8">
         <h1 class="text-3xl text-gray-400 font-bold p-5 mb-5">FAQ</h1>
-        <h1 class="text-3xl text-gray-400 font-bold mb-4">Frequently Asked Questions</h1>
+        <h1 class="text-3xl text-gray-400 font-bold mb-4">
+          Frequently Asked Questions
+        </h1>
         <div class="space-y-4">
           <!-- FAQ Item 1 -->
           <div class="border rounded-md p-4">
-            <button class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-900" aria-expanded="false" onclick="toggleAnswer('answer1')">
+            <button
+              class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-900"
+              aria-expanded="false"
+              onclick="toggleAnswer('answer1')"
+            >
               <span class="text-gray-100">What do I get exactly?</span>
               <i id="icon1" class="fas fa-plus text-gray-100"></i>
             </button>
-            <div id="answer1" class="hidden mt-2 text-gray-100 transition-opacity duration-300">
-                You get access to a database of over 500+ Niche Ideas in the tools space. Think Word Counter, Calcluators etc. These can be used for either standalone sites or add on's to your site. You also get a growing list of untapped tools along with deep dives of popular ones.
+            <div
+              id="answer1"
+              class="hidden mt-2 text-gray-100 transition-opacity duration-300"
+            >
+              You get access to a database of over 500+ Niche Ideas in the tools
+              space. Think Word Counter, Calcluators etc. These can be used for
+              either standalone sites or add on's to your site. You also get a
+              growing list of untapped tools along with deep dives of popular
+              ones.
             </div>
           </div>
           <!-- FAQ Item 2 -->
           <div class="border rounded-md p-4">
-            <button class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-300" aria-expanded="false" onclick="toggleAnswer('answer2')">
-                <span class="text-gray-100">Can I get a refund?</span>
+            <button
+              class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-300"
+              aria-expanded="false"
+              onclick="toggleAnswer('answer2')"
+            >
+              <span class="text-gray-100">Can I get a refund?</span>
               <i id="icon2" class="fas fa-plus text-gray-100"></i>
             </button>
-            <div id="answer2" class="hidden mt-2 text-gray-100 transition-opacity duration-300">
-                There are no refunds. Make sure you want it before you buy
+            <div
+              id="answer2"
+              class="hidden mt-2 text-gray-100 transition-opacity duration-300"
+            >
+              There are no refunds. Make sure you want it before you buy
             </div>
           </div>
           <!-- FAQ Item 3 -->
           <div class="border rounded-md p-4">
-            <button class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-300" aria-expanded="false" onclick="toggleAnswer('answer3')">
-                <span class="text-gray-100">I have another Question?</span>
+            <button
+              class="flex justify-between items-center w-full py-2 px-4 bg-[#191e24] hover:bg-[#191e24] transition-colors duration-300"
+              aria-expanded="false"
+              onclick="toggleAnswer('answer3')"
+            >
+              <span class="text-gray-100">I have another Question?</span>
               <i id="icon3" class="fas fa-plus text-gray-100"></i>
             </button>
-            <div id="answer3" class="hidden mt-2 text-gray-100 transition-opacity duration-300">
+            <div
+              id="answer3"
+              class="hidden mt-2 text-gray-100 transition-opacity duration-300"
+            >
               Cool. Reach out on my gmail.(shazid747@gmail.com)
             </div>
           </div>
         </div>
       </div>
-</section>
+    </section>
 
-<script>
-    function toggleAnswer(id) {
-      const answer = document.getElementById(id);
-      const icon = document.getElementById('icon' + id.substr(-1));
-      const expanded = answer.getAttribute('aria-expanded') === 'true';
-      answer.classList.toggle('hidden');
-      answer.classList.toggle('opacity-100');
-      answer.setAttribute('aria-expanded', !expanded);
-      if (!expanded) {
-        icon.classList.remove('fa-plus');
-        icon.classList.add('fa-minus');
-      } else {
-        icon.classList.remove('fa-minus');
-        icon.classList.add('fa-plus');
-      }
-    }
-  </script>
+    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+      <div class="max-w-4xl mx-auto">
+        <div class="flex flex-col items-center justify-center gap-5">
+          <div class="flex gap-3">
+            <h1><i class="fas fa-star text-yellow-500"></i></h1>
+            <h1><i class="fas fa-star text-yellow-500"></i></h1>
+            <h1><i class="fas fa-star text-yellow-500"></i></h1>
+            <h1><i class="fas fa-star text-yellow-500"></i></h1>
+            <h1><i class="fas fa-star text-yellow-500"></i></h1>
+          </div>
+          <p class="text-gray-400 w-full md:w-2/3 lg:w-1/2">
+            I love building but never know what to build. I don't want to spend
+            hours searching for the next idea I should spin up.Tools Builder
+            solves this with a dashboard of inspiring tools to get ideas from
+            along with a nice list of tools that haven't been built yet.
+          </p>
+          <div class="flex items-center gap-5">
+            <img
+              src="./images/profile image 1.webp"
+              class="w-10 h-10 rounded-full"
+              alt=""
+            />
+            <div class="">
+              <h1 class="text-gray-400 font-semibold">Mark</h1>
+              <p class="text-gray-400 text-xs">tinker</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-
+    <section class="bg-[#191e24] m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl">
+        <div class="flex flex-col items-center justify-center">
+          <div>
+            <h1 class="text-purple-600 p-4">Pricing</h1>
+            <h1 class="text-gray-400 font-bold text-2xl md:text-4xl mx-auto max-w-[75%] m-5">
+              Save hours of research and start building it today.
+            </h1>
+          </div>
+          <div class="border border-purple-600 rounded-lg p-3 w-full md:w-3/4 lg:w-2/4 xl:w-1/3 mt-10 mb-10">
+            <h1 class="text-gray-400 text-2xl font-semibold">Tools Builder</h1>
+            <p class="text-gray-400 mt-2 mb-4">
+              100+ hours of research compiled into easy-to-read tables to get ideas and launch.
+            </p>
+            <p class="text-2xl text-gray-400 font-semibold mb-4">$199 not<span class="font-extrabold text-5xl"> $99</span> USD only</p>
+            <ul class="text-gray-400 text-left list-disc list-none  pl-4">
+              <li><i class="fas fa-check text-purple-500"></i> Lifetime Access</li>
+              <li><i class="fas fa-check text-purple-500"></i> 500+ Tools Ideas</li>
+              <li><i class="fas fa-check text-purple-500"></i> 100+ untapped Niche Tools</li>
+              <li><i class="fas fa-check text-purple-500"></i> Discord Access</li>
+              <li><i class="fas fa-check text-purple-500"></i> Lifetime Updates (adding 5-10 more niche ideas daily)</li>
+              <li><i class="fas fa-check text-purple-500"></i> Free Tool Breakdown ($150 Value)</li>
+              <li><i class="fas fa-check text-purple-500"></i> Reddit Rundown Guide ($25 Value)</li>
+            </ul>
+            <button class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-300 mt-6">
+              <span><i class="fa-solid fa-bolt text-white"></i></span>
+              Get Tool Builder
+            </button>
+            <p class="text-gray-400 mt-4">Pay once. Access Forever</p>
+          </div>
+        </div>
+      </section>
+      
 
     <script>
-        const textInput = document.getElementById('text-input');
-        const wordCount = document.getElementById('word-count');
-        const letterCount = document.getElementById('letter-count');
-
-        textInput.addEventListener('input', () => {
-            const text = textInput.value;
-            wordCount.textContent = text.trim().split(/\s+/).filter(word => word.length > 0).length;
-            letterCount.textContent = text.replace(/\s/g, '').length;
-        });
+      function toggleAnswer(id) {
+        const answer = document.getElementById(id);
+        const icon = document.getElementById("icon" + id.substr(-1));
+        const expanded = answer.getAttribute("aria-expanded") === "true";
+        answer.classList.toggle("hidden");
+        answer.classList.toggle("opacity-100");
+        answer.setAttribute("aria-expanded", !expanded);
+        if (!expanded) {
+          icon.classList.remove("fa-plus");
+          icon.classList.add("fa-minus");
+        } else {
+          icon.classList.remove("fa-minus");
+          icon.classList.add("fa-plus");
+        }
+      }
     </script>
-    
-</body>
 
+    <script>
+      const textInput = document.getElementById("text-input");
+      const wordCount = document.getElementById("word-count");
+      const letterCount = document.getElementById("letter-count");
+
+      textInput.addEventListener("input", () => {
+        const text = textInput.value;
+        wordCount.textContent = text
+          .trim()
+          .split(/\s+/)
+          .filter((word) => word.length > 0).length;
+        letterCount.textContent = text.replace(/\s/g, "").length;
+      });
+    </script>
+  </body>
 </html>
