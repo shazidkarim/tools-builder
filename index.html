@@ -127,8 +127,44 @@
             </div>
         </div>
     </section>
+
+    <section class="m-auto mt-5 text-center p-5 md:p-10 max-w-screen-xxl ">
+        <h1 class="text-2xl text-gray-400 font-bold mb-4">Example Tool</h1>
+        <p class="mb-4 text-gray-400">This Word Counter is perfect as an add-on or even standalone tool.</p>
+        <div class="w-4/12 mx-auto border p-3 bg-[#ebf8ff] rounded-lg">
+            <textarea id="text-input" class="w-full bg-[#1d232a] text-gray-400 p-3 border border-gray-300 rounded-lg mb-4" rows="10" placeholder="Type or paste your text here..."></textarea>
+        <div class="flex justify-between">
+            <div class="font-bold text-gray-600">Word Count: <span class="font-bold" id="word-count">0</span></div>
+            <div class="font-bold text-gray-600">Letter Count: <span class="font-bold" id="letter-count">0</span></div>
+        </div>
+        <p class="text-gray-600 p-3">it into your site with simple copy and paste. Works with wordpress, next.js and more.
+            Plug</p>
+        </div>
+    </section>
     
     
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        const textInput = document.getElementById('text-input');
+        const wordCount = document.getElementById('word-count');
+        const letterCount = document.getElementById('letter-count');
+
+        textInput.addEventListener('input', () => {
+            const text = textInput.value;
+            wordCount.textContent = text.trim().split(/\s+/).filter(word => word.length > 0).length;
+            letterCount.textContent = text.replace(/\s/g, '').length;
+        });
+    </script>
     
 </body>
 
